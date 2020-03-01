@@ -1,0 +1,29 @@
+NAME: Usama Ali
+ID #: 1582217
+CMPUT 274, Fall 2019
+
+Weekly Exercise #7: Euler’s Phi Function
+
+Description:
+	This file contains functions that can calculate the Euler totient value of any given positive interger n value upto 32 bits (used in RSA encryption). It also calculates the probability of getting good "e" values, such that gcd(e,phi(n))=1.
+
+Included Files:
+	* eulerphi.cpp
+	* README
+
+Running Instructions:
+	1. Copy eulerphi.cpp to a directory.
+	2. Open a terminal on Linux and browse to that directory.
+	3. To compile, run the following command:
+		g++  eulerphi.cpp -o eulerphi
+	4. To run, run the following command:
+		./ eulerphi
+	5. Then, enter your number.
+	6. The program will print n, phi(n), phi(n)/n.
+	7. It will also do a 15-bit test if the number you entered is greater or equal to 2^15.
+
+Assumtions:
+	1. Number inputted by user shall be an interger greater than 0.
+
+Note:
+	1. gcd() function used was referenced from eClass. It uses a fast Euclid algorithm, improving its efficiency.

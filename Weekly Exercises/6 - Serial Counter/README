@@ -1,0 +1,35 @@
+NAME: Usama Ali
+ID #: 1582217
+CMPUT 274, Fall 2019
+
+Exercise 6: Serial Counter
+
+Description:
+	This file contains a program that can use an Arduino kit to count in binary from 0 to 255 (ie 00000000 to 11111111). It can display the last 5 bits of the number, effectively making it count only from 0 to 31. It uses 5 LED lights to represent each of the 5 LSBs. It uses a hex character (0-F) inputted in Serial Monitor to increase the value. The space or enter key reset the value to 0. Any key except 0-9, A-F, a-f, space, or enter, will be ignored.  
+
+Included Files:
+	* serial_counter.cpp
+	* Makefile
+	* README
+
+Accessories:
+	* Arduino Mega Board (AMG)
+	* A-B style USB cable
+	* 6 breadboard jumper cables
+	* 5 LEDs
+	* 5 330-ohm resistors
+
+Wiring Instructions:
+	* As given in the guideline document "counting_lights.pdf" on eClass.
+
+Running Instructions:
+	1. Connect the Arduino to the PC using a A-B style USB cable. Ensure that the Arduino is using the proper serial port (/dev/ttyACM0 or -ACM1)
+	2. Open a terminal on Linux and browse to the directory containing serial_counter.cpp, Makefile and README.
+	3. To upload the code to Arduino and to start the serial monitor, run the following command:
+		make upload counting.cpp && serial-mon
+
+Assumtions:
+	1. Uses pins 9,10,11,12,13 for the LEDs, such that pin 11 corresponds to the green LED in the center.  The “first LED” is the one connected to pin 9. Can be easily re-mapped by editing line 3 in serial_counter.cpp.
+
+Notes:
+	1. Keys on the keyboard such as "home", "up arrow", etc can give unexpected results, which could be because they do not have an ASCII value.

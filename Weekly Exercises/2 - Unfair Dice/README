@@ -1,0 +1,30 @@
+NAME: Usama Ali
+ID #: 1582217
+CMPUT 274, Fall 2019
+
+Weekly Exercise 2: Unfair Dice
+
+Description:
+	This program first inputs list of probabilities (prob_list), seed (seed), and sample size (n) from user. It generates and prints a list (rolls), which is a random (based on seed inputted) list of n values that simulate the rolling of a biased die (based on prob_list).
+
+	Then, it inputs an interger (width) from user and prints a histogram of "rolls", scaling it so that the mode of "rolls" is "width" characters long.
+
+Included Files:
+	* unfairDice.py
+	* README
+
+Running Instructions:
+	1. Open a terminal on Linux and browse to directory containing unfairDice.py
+	2. Run the following command:
+		python3 unfairDice.py
+	3. Follow the on-screen instructions
+
+Assumtions:
+	1. Assumes that the user inputs only numerical characters throughout the program. The program is not designed to handle an unexpected data type input.
+	2. Assumes that inputted list of probabilties sum up to 1.0 and that all probabilites are floating point values between 0 and 1.
+	3. Assumes that the dice is labelled 1 to m, where m is number of probabilites entered.
+	4. Assumes that at least 2 probabilites are entered. 
+
+Note:
+	1. Randomness is decided by seed inputted. Same seed will result in same result every time.
+	2. Histogram is scaled based on "width" and frequency of mode. Any scaling factor with decimal points is rounded using round() function.

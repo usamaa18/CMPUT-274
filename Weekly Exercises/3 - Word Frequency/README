@@ -1,0 +1,29 @@
+NAME: Usama Ali
+ID #: 1582217
+CMPUT 274, Fall 2019
+
+Weekly Exercise 3: Word Frequency
+
+Description:
+	This program takes in 'filename' as a command line arguement, reads that file, counts the number of words in the file and generates a resultant file 'filename.out'. The resultant file contains an alphabetically ordered list of unique words, their raw frquencies and their relative frequencies wrt total word count.
+
+Included Files:
+	* freq.py
+	* README
+
+Running Instructions:
+	1. Open a terminal on Linux and browse to directory containing freq.py
+	2. Run the following command:
+		python3 freq.py <input_file_name>
+	3. <input_file_name> should be replaced by the name of the file you wish to read.
+	4. File should exist in the same directory as freq.py.
+	5. If the program runs error-free, a results file named <input_file_name>.out will be created.
+
+Assumtions:
+	1. Assumes that the input file is the same directory as freq.py
+	2. Assumes that the input file will be in plaintext.
+
+Note:
+	1. If <input_file_name>.out already exists, it will be cleared and replaced.
+	2. Relative frequency is based on number of occurence of unique word and total number of words in file. Any scaling factor with decimal points is rounded to 3 decimal points using round() function.
+	3. Output file will be in plaintext.

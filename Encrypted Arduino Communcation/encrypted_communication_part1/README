@@ -1,0 +1,37 @@
+Name: Raamish Naveed and Usama Ali 
+ID: 1582029 (Raamish), 1582217 (Usama)
+CMPUT 274, Fall  2019
+Assignment 2: Encrypted Arduino Communication - Part 1
+
+
+Included Files:
+	*encrypted_communication_part1.cpp
+        *Makefile
+	*README
+
+Accessories:
+	*2x Arduino Mega Boards
+	*Breadboard
+	*5x Wire for Arduino
+	*550k ohm resistor
+	*USB cables for Arduinos from kits
+
+Wiring Instructions:
+	*Arduino1 TX3 <---> Arduino2 RX3
+	*Arduino1 RX3 <---> Arduino2 TX3
+	*Arduino1 GND <---> Arduino2 GND
+	*Arduino1 Pin13 <---> Arduino1 GND (Client)
+	*Arduino2 5V <---> 550k ohm resistor <---> Arduino2 Pin13 (Server)
+
+Running Instructions:
+ 	1) Open 2 terminal windows and in both, navigate to the folder where your program and Makefile is stored.
+ 	2) Make sure both the Arduinos are connected to your laptop, and that both of them are using the proper serial ports.
+	3) In the first terminal, type in: make upload-0 && serial-mon-0. 
+	4) In the other terminal, type in: make upload-1 && serial-mon-1. 
+ 	5) This will compile the program, upload it to the arduino, and open the serial monitor.
+ 	6) The server and client will be identified, and you may now begin chatting!
+
+Notes and Assumptions:
+The program seems to work fine. However, when typing is done at a fast rate, the chat seems to delay or even stop working. This is because of a buffer overflow and from what we know, we are not being tested on this.
+As long as typing is done at a normal pace, the program seems to work just fine.
+

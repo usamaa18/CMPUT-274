@@ -1,0 +1,32 @@
+NAME: Usama Ali
+ID #: 1582217
+CMPUT 274, Fall 2019
+
+Assignment 1: Huffman Coding
+
+Description:
+	This file contains functions that can compress and decompress any file using Huffman Coding. Two seperate libraries which can be found on eClass: huffman.py and bitio.py contain functions crucial to the execution of this program. This file can be used by compress.py and decompress.py (also found on eClass) which use the command-line interface to accept user input for the names of the files that need to be compressed and decompressed respectively. Compressed files are stored as file_name.huf.
+
+Included Files:
+	* util.py
+	* README
+
+Running Instructions:
+	1. Copy util.py to the directory containing huffman.py, bitio.py, compress.py and decompress.py
+	2. Open a terminal on Linux and browse to that directory.
+	3. To compress files, run the following command:
+		python3 compress.py <file1> <file2> ...
+	4. To decompress, run the following command:
+		python3 compress.py <file1> <file2> ...
+	5. <file1> <file2> ... should be replaced by the names of the files you wish to compress or decompress.
+	6. If <file1> <file2> ... are to be compressed, and exist in the directory, compressed versions named <file1>.huf <file2>.huf ... will be created in the directory of CLI.
+	7. If <file1>.huf <file2>.huf ... are to be decompressed, and exist in the directory, decompressed versions named <file1> <file2> ... will be created in the directory of CLI.
+
+Assumtions:
+	1. Assumes that the input file for decompression has the extension '.huf'.
+	2. Decompressor assumes that compressed file contains None, marking End-of-File.
+	3. Decompressor assumes that compressed file contains a valid pickled Huffman tree, using the method pickle.dump(tree, file). Returns error if this is not the case.
+
+Note:
+	1. Compressor appends None to indicate EOF of compressed file and then fluses the bitsteam using flush() method.
+	2. Decompressor may generate some empty bits at the end, if None is not used to indicate EOF.

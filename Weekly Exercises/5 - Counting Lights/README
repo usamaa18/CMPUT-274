@@ -1,0 +1,37 @@
+NAME: Usama Ali
+ID #: 1582217
+CMPUT 274, Fall 2019
+
+Exercise 6: Counting Lights
+
+Description:
+	This file contains a program that can use an Arduino kit to count in binary from 0 to 31 (ie 00000 to 11111). It uses 5 LED lights to represent each of the 5 bits. It uses a incrementation button to increase the value by one and decrementation button to decrease the value by one. It uses another button to store the current value and clear the LEDs. Pressing this button again will load the stored values back onto the LEDs.
+
+Included Files:
+	* counting.cpp
+	* Makefile
+	* README
+
+Accessories:
+	* Arduino Mega Board (AMG)
+	* A-B style USB cable
+	* 12 breadboard jumper cables
+	* 5 LEDs
+	* 3 push-buttons
+	* 5 330-ohm resistors
+
+Wiring Instructions:
+	* As given in the guideline document "counting_lights.pdf" on eClass.
+
+Running Instructions:
+	1. Connect the Arduino to the PC using a A-B style USB cable. Ensure that the Arduino is using the proper serial port (/dev/ttyACM0 or -ACM1)
+	2. Open a terminal on Linux and browse to the directory containing counting.cpp, Makefile and README.
+	3. To upload the code to Arduino, run the following command:
+		make upload counting.cpp 
+
+Assumtions:
+	1. Uses pins 9,10,11,12,13 for the LEDs, such that pin 11 corresponds to the green LED in the center.  The “first LED” is the one connected to pin 9. Can be easily re-mapped by editing line 3 in counting.cpp.
+	2. Uses pin 6 for the increment button, pin 7 for the decrement button, and pin 5 for the store/recall button. Can be re-mapped by editing lines 6, 5, and 7 respectively.
+
+Note:
+	1. Referenced http://www.martyncurrey.com/switching-things-on-and-off-with-an-arduino/ to understand  push-buttons.

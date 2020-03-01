@@ -1,0 +1,34 @@
+NAME: Usama Ali
+ID #: 1582217
+CMPUT 274, Fall 2019
+
+Weekly Exercise 4: Deck of Cards
+
+Description:
+	This program takes in 'filename' as a command line arguement, reads that file, converts the data into an object of deck of cards. It checks a few conditions: 
+		1) Deck should contain exactly 52 cards
+		2) Each card should be of valid type (valid rank and suite)
+		3) Each card should only occur once
+	If the conditions are met, the prgram plays a game of High Card Draw.
+
+Included Files:
+	* deck.py
+	* README
+
+Running Instructions:
+	1. Open a terminal on Linux and browse to directory containing deck.py
+	2. Run the following command:
+		python3 deck.py <input_file_name>
+	3. <input_file_name> should be replaced by the name of the file you wish to read.
+	4. File should exist in the same directory as deck.py.
+	5. If <input_file_name> is correctly formatted and contains a valid deck of cards, a 26 rounds of High Card Draw will be simulated.
+
+Assumtions:
+	1. Assumes that the input file is the same directory as deck.py
+	2. Assumes that the input file will be in plaintext.
+	3. Assumes that only one card will exist on each line in file.
+	4. Assumes that card suite does not matter in High Card Draw.
+
+Note:
+	1. Function __str__() in class Deck is defined but never called.
+	2. Number of rounds played depends on number of cards in deck, but it is always 26 because we use validate() before running play().
